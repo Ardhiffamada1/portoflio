@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* 1. Deklarasi Theme untuk Tailwind v4 */
+@theme {
+  --color-background: var(--bg-main);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  --color-border: var(--border-main);
+  --color-border-hover: var(--border-hover);
+  --color-foreground: var(--text-main);
+  --color-subtle: var(--text-subtle);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent-color);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 2. Variable Warna Mode Dark (Default) */
+:root {
+  --bg-main: #0a0a0a;
+  --bg-surface: #121212;
+  --bg-surface-hover: #1a1a1a;
+  --border-main: #262626;
+  --border-hover: #3a3a3a;
+  --text-main: #fafafa;
+  --text-subtle: #a3a3a3;
+  --text-muted: #525252;
+  --accent-color: #6e7e70;
+}
+
+/* 3. Variable Warna Mode Light */
+html.light {
+  --bg-main: #fbfbfb;
+  --bg-surface: #f0f0f0;
+  --bg-surface-hover: #e8e8e8;
+  --border-main: #e5e5e5;
+  --border-hover: #d4d4d4;
+  --text-main: #0a0a0a;
+  --text-subtle: #525252;
+  --text-muted: #8e8e8e;
+  --accent-color: #4a5b4c;
+}
+
+/* 4. Global Body Style & Smooth Transition */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: 2px;
+}
