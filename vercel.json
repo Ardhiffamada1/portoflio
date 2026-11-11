@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/studio-amp",
+      "destination": "/index.html"
+    }
+  ]
+}

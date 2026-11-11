@@ -1,0 +1,204 @@
+{
+  "EN": {
+    "experience": [
+      {
+        "period": "Jan 2025 — Jun 2026",
+        "role": "Freelance Full-Stack Developer",
+        "company": "Independent / Project-Based",
+        "points": [
+          "Architected and deployed custom business applications including CariClipper and industrial inventory systems.",
+          "Developed Python-based automation and data processing modules to streamline digital workflows.",
+          "Managed end-to-end project lifecycles from database design to cloud deployment (Vercel/cPanel)."
+        ]
+      },
+      {
+        "period": "Jan 2024 — Jan 2025",
+        "role": "Full-Stack Developer",
+        "company": "PT. Indonesia Development Corner",
+        "points": [
+          "Developed and maintained responsive web applications using Next.js and Laravel.",
+          "Utilized Docker and MySQL backend stacks for lightweight, containerized deployment environments.",
+          "Applied clean MVC architecture and collaborated in Agile/Scrum workflows using Trello."
+        ]
+      },
+      {
+        "period": "Oct 2023 — Jan 2024",
+        "role": "IT Assistant",
+        "company": "Hotel Mercure Pangkalan Bun",
+        "points": [
+          "Troubleshot network infrastructure with Head of IT and executed daily server data backups.",
+          "Monitored server room operations ensuring optimal conditions and maximum network uptime."
+        ]
+      },
+      {
+        "period": "Mar 2023 — Jul 2023",
+        "role": "Frontend Developer & UI/UX Intern",
+        "company": "Center of Excellence (COE) UDINUS",
+        "points": [
+          "Built centralized e-commerce platform infrastructure empowering local MSMEs in Central Java.",
+          "Translated high-fidelity Figma mockups into dynamic React.js code using Ant Design components."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "wms-system",
+        "title": "Warehouse Management System (WMS)",
+        "category": "Enterprise System",
+        "year": "2026",
+        "description": "Manufacturing/corporate warehouse system for stock logging, inventory transfer flows, real-time transaction monitoring, and automated stock reporting.",
+        "techStack": [
+          "Laravel",
+          "MySQL",
+          "React",
+          "Tailwind CSS",
+          "MVC Architecture"
+        ],
+        "architecture": "Modular MVC Backend with relational inventory ledger & role-based access control",
+        "highlights": [
+          "Multi-location stock mutation tracking & audit trails",
+          "Real-time low-stock threshold alerts and automated batch reporting",
+          "Role-based permissions for warehouse operators, supervisors, and auditors"
+        ],
+        "metrics": "Real-Time Stock Ledger",
+        "github": "https://github.com/Ardhiffamada1/WMS",
+        "demo": "https://wms-zeta-mauve.vercel.app/"
+      },
+      {
+        "id": "cariclipper",
+        "title": "CariClipper Service Platform",
+        "category": "Digital Directory Platform",
+        "year": "2025",
+        "description": "Web-based directory and booking platform connecting users with nearby digital service providers intuitively.",
+        "techStack": ["Next.js", "React", "Node.js", "Tailwind CSS", "Vercel"],
+        "architecture": "Server-Side Rendered (SSR) Next.js App Router with dynamic location filtering",
+        "highlights": [
+          "Fast search and multi-parameter filtering by location, rating, and service type",
+          "SEO-optimized dynamic vendor profiles with instant booking flow",
+          "Mobile-first responsive interface deployed on Vercel Edge network"
+        ],
+        "metrics": "Production Live Platform",
+        "github": null,
+        "demo": "https://www.cariclipper.biz.id/"
+      },
+      {
+        "id": "restaurant-pos",
+        "title": "Restaurant POS System",
+        "category": "Full-Stack Web App",
+        "year": "2024",
+        "description": "Full-stack Point-of-Sale application designed to simplify digital ordering, automated billing, and real-time transaction processing.",
+        "techStack": ["PHP", "Laravel", "MySQL", "Bootstrap", "RESTful API"],
+        "architecture": "Transactional RESTful backend with ACID-compliant order & receipt engine",
+        "highlights": [
+          "Synchronized table ordering, kitchen queue status, and cashier checkout",
+          "Automated tax/discount calculation and printable thermal receipt generation",
+          "Daily, weekly, and monthly revenue analytics dashboard"
+        ],
+        "metrics": "End-to-End POS Flow",
+        "github": "https://github.com/Ardhiffamada1/RestaurantPOS",
+        "demo": null
+      }
+    ]
+  },
+  "ID": {
+    "experience": [
+      {
+        "period": "Jan 2025 — Jun 2026",
+        "role": "Freelance Full-Stack Developer Mandiri",
+        "company": "Proyek Lepas / Independent",
+        "points": [
+          "Merancang dan mengimplementasikan aplikasi bisnis kustom seperti platform CariClipper dan sistem inventarisasi gudang.",
+          "Mengembangkan modul automasi dan pemrosesan data berbasis Python guna mengoptimalkan alur kerja digital klien.",
+          "Mengelola manajemen siklus penuh proyek (end-to-end) mulai dari perancangan basis data hingga deployment ke cloud server (Vercel/cPanel)."
+        ]
+      },
+      {
+        "period": "Jan 2024 — Jan 2025",
+        "role": "Full-Stack Developer",
+        "company": "PT. Indonesia Development Corner",
+        "points": [
+          "Mengembangkan dan memelihara aplikasi web kustom yang responsif menggunakan Next.js dan Laravel.",
+          "Memanfaatkan stack backend Docker dan MySQL untuk memastikan lingkungan deployment ter-kontainerisasi dan konsisten.",
+          "Menerapkan pola arsitektur MVC yang bersih serta berkolaborasi dalam alur kerja Agile/Scrum menggunakan Trello."
+        ]
+      },
+      {
+        "period": "Okt 2023 — Jan 2024",
+        "role": "IT Assistant",
+        "company": "Hotel Mercure Pangkalan Bun",
+        "points": [
+          "Troubleshoot infrastruktur jaringan bersama Head of IT dan mengeksekusi pencadangan data harian server.",
+          "Memantau operasional ruang server untuk memastikan uptime jaringan yang maksimal."
+        ]
+      },
+      {
+        "period": "Mar 2023 — Jul 2023",
+        "role": "Frontend Developer & UI/UX Intern",
+        "company": "Center of Excellence (COE) UDINUS",
+        "points": [
+          "Merancang platform e-commerce terpusat untuk memberdayakan UMKM lokal di Jawa Tengah.",
+          "Menerjemahkan mockup Figma high-fidelity menjadi kode React.js dinamis menggunakan komponen Ant Design."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "wms-system",
+        "title": "Warehouse Management System (WMS)",
+        "category": "Sistem Korporat",
+        "year": "2026",
+        "description": "Sistem pengelolaan gudang berbasis web tingkat korporat untuk pencatatan stok, pemindahan inventaris, pemantauan transaksi real-time, dan otomatisasi pelaporan.",
+        "techStack": [
+          "Laravel",
+          "MySQL",
+          "React",
+          "Tailwind CSS",
+          "MVC Architecture"
+        ],
+        "architecture": "Backend MVC Modular dengan pencatatan buku besar inventaris relasional & otorisasi berbasis peran (RBAC)",
+        "highlights": [
+          "Pelacakan mutasi stok multi-lokasi beserta rekam jejak audit (audit trail)",
+          "Peringatan otomatis stok menipis secara real-time dan ekspor laporan berkala",
+          "Manajemen hak akses untuk operator gudang, supervisor, dan auditor"
+        ],
+        "metrics": "Real-Time Stock Ledger",
+        "github": "https://github.com/Ardhiffamada1/WMS",
+        "demo": "https://wms-zeta-mauve.vercel.app/"
+      },
+      {
+        "id": "cariclipper",
+        "title": "CariClipper Service Platform",
+        "category": "Platform Direktori Digital",
+        "year": "2025",
+        "description": "Platform direktori dan pemesanan layanan digital berbasis web yang menghubungkan pengguna dengan penyedia jasa terdekat secara intuitif.",
+        "techStack": ["Next.js", "React", "Node.js", "Tailwind CSS", "Vercel"],
+        "architecture": "Next.js App Router dengan Server-Side Rendering (SSR) & pemfilteran lokasi dinamis",
+        "highlights": [
+          "Pencarian instan dan filter multi-parameter berdasarkan lokasi, rating, serta jenis layanan",
+          "Halaman profil mitra yang teroptimasi SEO dengan alur reservasi cepat",
+          "Antarmuka responsif mobile-first yang di-deploy pada jaringan Vercel Edge"
+        ],
+        "metrics": "Platform Live Produksi",
+        "github": null,
+        "demo": "https://www.cariclipper.biz.id/"
+      },
+      {
+        "id": "restaurant-pos",
+        "title": "Restaurant POS System",
+        "category": "Aplikasi Web Full-Stack",
+        "year": "2024",
+        "description": "Aplikasi kasir (point-of-sale) full-stack untuk menyederhanakan pemesanan digital, penagihan otomatis, dan pemrosesan transaksi real-time.",
+        "techStack": ["PHP", "Laravel", "MySQL", "Bootstrap", "RESTful API"],
+        "architecture": "Backend RESTful transaksional dengan mesin pemrosesan pesanan & struk yang konsisten",
+        "highlights": [
+          "Sinkronisasi pemesanan meja, antrean dapur, hingga pembayaran kasir",
+          "Kalkulasi pajak/diskon otomatis serta pembuatan struk belanja siap cetak",
+          "Dashboard analitik pendapatan harian, mingguan, dan bulanan"
+        ],
+        "metrics": "Alur Kasir End-to-End",
+        "github": "https://github.com/Ardhiffamada1/RestaurantPOS",
+        "demo": null
+      }
+    ]
+  }
+}

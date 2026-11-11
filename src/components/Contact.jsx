@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Mail, Check, Copy, ArrowUpRight, Globe } from "lucide-react";
+import { Mail, Check, Copy, ArrowUpRight, Globe, Send } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 const GithubIcon = ({ size = 14 }) => (
   <svg
@@ -36,6 +37,9 @@ const LinkedinIcon = ({ size = 14 }) => (
 
 export default function Contact({ t }) {
   const [copied, setCopied] = useState(false);
+  const [senderName, setSenderName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const email = "ardhiffaperdana@gmail.com";
 
   const handleCopy = () => {
@@ -44,82 +48,147 @@ export default function Contact({ t }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleQuickCompose = (e) => {
+    e.preventDefault();
+    const mailSubject = encodeURIComponent(
+      subject || `Inquiry from ${senderName || "Portfolio Visitor"}`
+    );
+    const mailBody = encodeURIComponent(
+      `Hi Ardhiffa,\n\n${message}\n\nBest regards,\n${senderName}`
+    );
+    window.location.href = `mailto:${email}?subject=${mailSubject}&body=${mailBody}`;
+  };
+
   return (
-    <section id="contact" className="py-28 border-t border-border">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="max-w-2xl space-y-8">
-          <div>
-            <span className="text-xs uppercase tracking-widest text-muted font-mono">
-              {t.contact.tag}
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mt-3">
-              {t.contact.title}
-            </h2>
-          </div>
+    <section id="contact" className="py-20 sm:py-28 border-t border-border">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: Direct Contact & Links */}
+          <FadeIn className="lg:col-span-7 space-y-6 sm:space-y-8">
+            <div>
+              <span className="text-xs uppercase tracking-widest text-muted font-mono">
+                {t.contact.tag}
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-foreground mt-3">
+                {t.contact.title}
+              </h2>
+            </div>
 
-          <p className="text-subtle text-sm sm:text-base font-light leading-relaxed">
-            {t.contact.description}
-          </p>
+            <p className="text-subtle text-xs sm:text-base font-light leading-relaxed max-w-xl">
+              {t.contact.description}
+            </p>
 
-          {/* Email Actions */}
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <a
-              href={`mailto:${email}`}
-              className="inline-flex items-center gap-2.5 px-6 py-3 bg-foreground text-background text-xs font-semibold tracking-wide rounded-sm hover:opacity-90 transition-opacity"
+            {/* Email Actions */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-2">
+              <a
+                href={`mailto:${email}`}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-foreground text-background text-xs font-semibold tracking-wide rounded-sm hover:opacity-90 transition-opacity"
+              >
+                <Mail size={15} />
+                <span>{t.contact.btnEmail}</span>
+              </a>
+
+              <button
+                onClick={handleCopy}
+                type="button"
+                className="glass-card inline-flex items-center justify-center gap-2 px-4 py-3 text-subtle hover:text-foreground text-xs font-mono rounded-sm cursor-pointer"
+              >
+                {copied ? (
+                  <Check size={14} className="text-foreground" />
+                ) : (
+                  <Copy size={14} />
+                )}
+                <span className="truncate">{copied ? "Copied!" : email}</span>
+              </button>
+            </div>
+
+            {/* Social & Web Links */}
+            <div className="pt-8 sm:pt-10 border-t border-border flex flex-wrap items-center gap-5 sm:gap-6 text-xs text-subtle font-mono">
+              <a
+                href={t.contact.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+              >
+                <Globe size={14} className="text-foreground" />
+                <span>ardhiffaperdana.my.id</span>
+                <ArrowUpRight size={12} className="text-muted" />
+              </a>
+
+              <a
+                href={t.contact.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+              >
+                <GithubIcon size={14} />
+                <span>GitHub</span>
+                <ArrowUpRight size={12} className="text-muted" />
+              </a>
+
+              <a
+                href={t.contact.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+              >
+                <LinkedinIcon size={14} />
+                <span>LinkedIn</span>
+                <ArrowUpRight size={12} className="text-muted" />
+              </a>
+            </div>
+          </FadeIn>
+
+          {/* Right Column: Quick Inquiry Composer */}
+          <FadeIn delay={0.15} className="lg:col-span-5">
+            <form
+              onSubmit={handleQuickCompose}
+              className="glass-card p-5 sm:p-6 rounded-sm space-y-4"
             >
-              <Mail size={15} />
-              <span>{t.contact.btnEmail}</span>
-            </a>
+              <div className="flex items-center justify-between border-b border-border pb-3">
+                <span className="text-xs font-mono uppercase tracking-wider text-foreground">
+                  {t.contact.quickMsgTitle}
+                </span>
+                <span className="text-[10px] font-mono text-muted">
+                  DIRECT MAILTO
+                </span>
+              </div>
 
-            <button
-              onClick={handleCopy}
-              type="button"
-              className="inline-flex items-center gap-2 px-4 py-3 border border-border bg-surface text-subtle hover:text-foreground text-xs font-mono rounded-sm hover:border-border-hover transition-all cursor-pointer"
-            >
-              {copied ? (
-                <Check size={14} className="text-accent" />
-              ) : (
-                <Copy size={14} />
-              )}
-              <span>{copied ? "Copied!" : email}</span>
-            </button>
-          </div>
+              <div className="space-y-3">
+                <input
+                  type="text"
+                  required
+                  value={senderName}
+                  onChange={(e) => setSenderName(e.target.value)}
+                  placeholder={t.contact.quickMsgName}
+                  className="w-full px-3.5 py-2.5 text-xs bg-background/70 border border-border rounded-xs text-foreground placeholder:text-muted focus:outline-none focus:border-foreground transition-colors"
+                />
+                <input
+                  type="text"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  placeholder={t.contact.quickMsgSubject}
+                  className="w-full px-3.5 py-2.5 text-xs bg-background/70 border border-border rounded-xs text-foreground placeholder:text-muted focus:outline-none focus:border-foreground transition-colors"
+                />
+                <textarea
+                  rows={3}
+                  required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder={t.contact.quickMsgBody}
+                  className="w-full px-3.5 py-2.5 text-xs bg-background/70 border border-border rounded-xs text-foreground placeholder:text-muted focus:outline-none focus:border-foreground transition-colors resize-none"
+                />
+              </div>
 
-          {/* Social & Web Links dari translations.js */}
-          <div className="pt-10 border-t border-border flex flex-wrap items-center gap-6 text-xs text-subtle font-mono">
-            <a
-              href={t.contact.websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
-            >
-              <Globe size={14} className="text-accent" />
-              <span>ardhiffaperdana.my.id</span>
-              <ArrowUpRight size={12} className="text-muted" />
-            </a>
-
-            <a
-              href={t.contact.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
-            >
-              <GithubIcon size={14} />
-              <span>GitHub</span>
-              <ArrowUpRight size={12} className="text-muted" />
-            </a>
-
-            <a
-              href={t.contact.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
-            >
-              <LinkedinIcon size={14} />
-              <span>LinkedIn</span>
-              <ArrowUpRight size={12} className="text-muted" />
-            </a>
-          </div>
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-foreground text-background text-xs font-medium rounded-xs hover:opacity-90 transition-opacity cursor-pointer"
+              >
+                <Send size={13} />
+                <span>{t.contact.quickMsgSend}</span>
+              </button>
+            </form>
+          </FadeIn>
         </div>
       </div>
     </section>

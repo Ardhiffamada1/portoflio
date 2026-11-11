@@ -7,6 +7,7 @@ export const translations = {
       experience: "Experience",
       education: "Education",
       contact: "Contact",
+      cmdHint: "Command Menu",
     },
     hero: {
       status: "Available for select engineering roles",
@@ -18,12 +19,14 @@ export const translations = {
         "Result-oriented Full-Stack Developer with 2+ years of experience in designing, building, and deploying industrial-grade web applications using Next.js, React, Laravel, and Docker.",
       btnProjects: "Explore Selected Works",
       btnContact: "Get in Touch",
+      btnTerminal: "Quick Command",
       metaFocus: "CURRENT FOCUS",
       metaFocusValue: "Enterprise Systems & Web Apps",
       metaDegree: "EDUCATION",
       metaDegreeValue: "B.C.S in Informatics (UDINUS)",
       metaLangs: "LANGUAGES",
       metaLangsValue: "Indonesian (Native) • English (Fluent)",
+      localTimeLabel: "LOCAL TIME (WIB)",
     },
     about: {
       tag: "01 — ABOUT & SUMMARY",
@@ -42,6 +45,9 @@ export const translations = {
     skills: {
       tag: "02 — SKILLS & STACK",
       title: "Technical Stack & Competencies",
+      subtitle:
+        "Interactive overview of core technologies used to design, build, and deploy full-stack systems.",
+      filterAll: "All Stack",
       languages: "Languages",
       frameworks: "Frameworks & Libraries",
       backendDb: "Backend & Database",
@@ -52,8 +58,13 @@ export const translations = {
       title: "Featured Works & Implementations",
       subtitle:
         "A selection of industrial-grade systems, digital platforms, and POS tools.",
+      filterAll: "All Projects",
       repoBtn: "Repository",
       liveBtn: "View Live App",
+      detailsBtn: "System Breakdown",
+      closeModal: "Close Breakdown",
+      archLabel: "Architecture & Engineering Highlights",
+      impactLabel: "Key Capabilities",
       items: [
         {
           id: "wms-system",
@@ -69,6 +80,14 @@ export const translations = {
             "Tailwind CSS",
             "MVC Architecture",
           ],
+          architecture:
+            "Modular MVC Backend with relational inventory ledger & role-based access control",
+          highlights: [
+            "Multi-location stock mutation tracking & audit trails",
+            "Real-time low-stock threshold alerts and automated batch reporting",
+            "Role-based permissions for warehouse operators, supervisors, and auditors",
+          ],
+          metrics: "Real-Time Stock Ledger",
           github: "https://github.com/Ardhiffamada1/WMS",
           demo: "https://wms-zeta-mauve.vercel.app/",
         },
@@ -80,6 +99,14 @@ export const translations = {
           description:
             "Web-based directory and booking platform connecting users with nearby digital service providers intuitively.",
           techStack: ["Next.js", "React", "Node.js", "Tailwind CSS", "Vercel"],
+          architecture:
+            "Server-Side Rendered (SSR) Next.js App Router with dynamic location filtering",
+          highlights: [
+            "Fast search and multi-parameter filtering by location, rating, and service type",
+            "SEO-optimized dynamic vendor profiles with instant booking flow",
+            "Mobile-first responsive interface deployed on Vercel Edge network",
+          ],
+          metrics: "Production Live Platform",
           github: null, // Private Repository
           demo: "https://www.cariclipper.biz.id/",
         },
@@ -91,6 +118,14 @@ export const translations = {
           description:
             "Full-stack Point-of-Sale application designed to simplify digital ordering, automated billing, and real-time transaction processing.",
           techStack: ["PHP", "Laravel", "MySQL", "Bootstrap", "RESTful API"],
+          architecture:
+            "Transactional RESTful backend with ACID-compliant order & receipt engine",
+          highlights: [
+            "Synchronized table ordering, kitchen queue status, and cashier checkout",
+            "Automated tax/discount calculation and printable thermal receipt generation",
+            "Daily, weekly, and monthly revenue analytics dashboard",
+          ],
+          metrics: "End-to-End POS Flow",
           github: "https://github.com/Ardhiffamada1/RestaurantPOS",
           demo: null,
         },
@@ -104,6 +139,7 @@ export const translations = {
           period: "Jan 2025 — Jun 2026",
           role: "Freelance Full-Stack Developer",
           company: "Independent / Project-Based",
+          badge: "Latest",
           points: [
             "Architected and deployed custom business applications including CariClipper and industrial inventory systems.",
             "Developed Python-based automation and data processing modules to streamline digital workflows.",
@@ -145,7 +181,7 @@ export const translations = {
       title: "Education & Certifications",
       eduDegree: "Bachelor of Computer Science (S.Kom.) — Informatics",
       eduInstitution: "Dian Nuswantoro University (UDINUS) — Semarang",
-      eduPeriod: "2019 — 2024 (Awaiting Final Thesis Defense)",
+      eduPeriod: "2019 — 2024",
       certTitle: "Certifications & Grants",
       certBnsp: "BNSP Web Developer Competency Certification",
       certBnspDesc:
@@ -160,9 +196,25 @@ export const translations = {
       description:
         "Available for full-stack engineering roles, enterprise system development, and technical consultations.",
       btnEmail: "Send an Email",
+      quickMsgTitle: "Quick Inquiry Composer",
+      quickMsgName: "Your Name / Company",
+      quickMsgSubject: "Project or Role Topic",
+      quickMsgBody: "Brief details about your project or opportunity...",
+      quickMsgSend: "Compose in Email Client",
       githubUrl: "https://github.com/Ardhiffamada1",
       linkedinUrl: "https://linkedin.com/in/ardhiffamada",
       websiteUrl: "https://ardhiffaperdana.my.id",
+    },
+    commandPalette: {
+      placeholder: "Type a command or search sections...",
+      noResults: "No matching command found.",
+      secNavigation: "Navigation",
+      secActions: "Quick Actions",
+      secLinks: "External Profiles",
+      toggleTheme: "Toggle Dark / Light Theme",
+      switchLang: "Switch Language (ID / EN)",
+      copyEmail: "Copy Email Address",
+      copiedEmail: "Email Copied to Clipboard!",
     },
   },
 
@@ -174,6 +226,7 @@ export const translations = {
       experience: "Pengalaman",
       education: "Pendidikan",
       contact: "Kontak",
+      cmdHint: "Menu Cepat",
     },
     hero: {
       status: "Tersedia untuk posisi Software Engineering",
@@ -182,22 +235,24 @@ export const translations = {
       tagline:
         "Membangun sistem web berskala besar, sistem korporat, dan platform digital yang responsif.",
       description:
-        "Full-Stack Web Developer berorientasi hasil dengan pengalaman 2+ tahun dalam merancang, membangun, dan mendepolikan aplikasi web industri menggunakan Next.js, React, Laravel, dan Docker.",
-      btnProjects: "Lihat Portofolio Utamanya",
+        "Full-Stack Web Developer berorientasi hasil dengan pengalaman 2+ tahun dalam merancang, membangun, dan mendeploy aplikasi web industri menggunakan Next.js, React, Laravel, dan Docker.",
+      btnProjects: "Lihat Portofolio Utama",
       btnContact: "Hubungi Saya",
+      btnTerminal: "Menu Pintas",
       metaFocus: "FOKUS UTAMA",
       metaFocusValue: "Sistem Korporat & Aplikasi Web",
       metaDegree: "PENDIDIKAN",
       metaDegreeValue: "S.Kom Teknik Informatika (UDINUS)",
       metaLangs: "BAHASA",
       metaLangsValue: "Indonesia (Native) • Inggris (Fasih)",
+      localTimeLabel: "WAKTU LOKAL (WIB)",
     },
     about: {
       tag: "01 — TENTANG SAYA",
       title:
         "Menghubungkan logika kompleks dengan pengalaman digital yang responsif.",
       text1:
-        "Saya adalah seorang Full-Stack Web Developer berdasarkan di Semarang, Indonesia, dengan pengalaman lebih dari 2 tahun membangun aplikasi siap pakai untuk industri.",
+        "Saya adalah seorang Full-Stack Web Developer berdomisili di Semarang, Indonesia, dengan pengalaman lebih dari 2 tahun membangun aplikasi siap pakai untuk kebutuhan industri.",
       text2:
         "Praktik kerja saya berpusat pada arsitektur MVC yang bersih, komponen frontend modular, serta deployment ter-kontainerisasi yang ringan menggunakan Docker dan platform cloud.",
       statYears: "2+ Tahun",
@@ -210,6 +265,9 @@ export const translations = {
     skills: {
       tag: "02 — KEAHLIAN TEKNIS",
       title: "Tech Stack & Kompetensi",
+      subtitle:
+        "Ringkasan interaktif teknologi utama yang saya gunakan untuk merancang, membangun, dan men-deploy sistem full-stack.",
+      filterAll: "Semua Stack",
       languages: "Bahasa Pemrograman",
       frameworks: "Framework & Library",
       backendDb: "Backend & Database",
@@ -217,16 +275,21 @@ export const translations = {
     },
     projects: {
       tag: "03 — PORTOFOLIO UTAMA",
-      title: "Proyek Pilihan & Implemetasi",
+      title: "Proyek Pilihan & Implementasi",
       subtitle:
         "Kumpulan sistem korporat, platform direktori digital, dan aplikasi kasir POS.",
+      filterAll: "Semua Proyek",
       repoBtn: "Repositori",
       liveBtn: "Lihat Aplikasi",
+      detailsBtn: "Detail Arsitektur",
+      closeModal: "Tutup Detail",
+      archLabel: "Arsitektur & Sorotan Teknis",
+      impactLabel: "Fitur Utama Sistem",
       items: [
         {
           id: "wms-system",
           title: "Warehouse Management System (WMS)",
-          category: "Sistem Korporat / Manufaktur",
+          category: "Sistem Korporat",
           year: "2026",
           description:
             "Sistem pengelolaan gudang berbasis web tingkat korporat untuk pencatatan stok, pemindahan inventaris, pemantauan transaksi real-time, dan otomatisasi pelaporan.",
@@ -237,6 +300,14 @@ export const translations = {
             "Tailwind CSS",
             "MVC Architecture",
           ],
+          architecture:
+            "Backend MVC Modular dengan pencatatan buku besar inventaris relasional & otorisasi berbasis peran (RBAC)",
+          highlights: [
+            "Pelacakan mutasi stok multi-lokasi beserta rekam jejak audit (audit trail)",
+            "Peringatan otomatis stok menipis secara real-time dan ekspor laporan berkala",
+            "Manajemen hak akses untuk operator gudang, supervisor, dan auditor",
+          ],
+          metrics: "Real-Time Stock Ledger",
           github: "https://github.com/Ardhiffamada1/WMS",
           demo: "https://wms-zeta-mauve.vercel.app/",
         },
@@ -248,6 +319,14 @@ export const translations = {
           description:
             "Platform direktori dan pemesanan layanan digital berbasis web yang menghubungkan pengguna dengan penyedia jasa terdekat secara intuitif.",
           techStack: ["Next.js", "React", "Node.js", "Tailwind CSS", "Vercel"],
+          architecture:
+            "Next.js App Router dengan Server-Side Rendering (SSR) & pemfilteran lokasi dinamis",
+          highlights: [
+            "Pencarian instan dan filter multi-parameter berdasarkan lokasi, rating, serta jenis layanan",
+            "Halaman profil mitra yang teroptimasi SEO dengan alur reservasi cepat",
+            "Antarmuka responsif mobile-first yang di-deploy pada jaringan Vercel Edge",
+          ],
+          metrics: "Platform Live Produksi",
           github: null, // Private Repository
           demo: "https://www.cariclipper.biz.id/",
         },
@@ -259,6 +338,14 @@ export const translations = {
           description:
             "Aplikasi kasir (point-of-sale) full-stack untuk menyederhanakan pemesanan digital, penagihan otomatis, dan pemrosesan transaksi real-time.",
           techStack: ["PHP", "Laravel", "MySQL", "Bootstrap", "RESTful API"],
+          architecture:
+            "Backend RESTful transaksional dengan mesin pemrosesan pesanan & struk yang konsisten",
+          highlights: [
+            "Sinkronisasi pemesanan meja, antrean dapur, hingga pembayaran kasir",
+            "Kalkulasi pajak/diskon otomatis serta pembuatan struk belanja siap cetak",
+            "Dashboard analitik pendapatan harian, mingguan, dan bulanan",
+          ],
+          metrics: "Alur Kasir End-to-End",
           github: "https://github.com/Ardhiffamada1/RestaurantPOS",
           demo: null,
         },
@@ -272,6 +359,7 @@ export const translations = {
           period: "Jan 2025 — Jun 2026",
           role: "Freelance Full-Stack Developer Mandiri",
           company: "Proyek Lepas / Independent",
+          badge: "Terbaru",
           points: [
             "Merancang dan mengimplementasikan aplikasi bisnis kustom seperti platform CariClipper dan sistem inventarisasi gudang.",
             "Mengembangkan modul automasi dan pemrosesan data berbasis Python guna mengoptimalkan alur kerja digital klien.",
@@ -313,7 +401,7 @@ export const translations = {
       title: "Gelar Akademis & Kualifikasi",
       eduDegree: "Sarjana Komputer (S.Kom.) — Teknik Informatika",
       eduInstitution: "Universitas Dian Nuswantoro (UDINUS) — Semarang",
-      eduPeriod: "2019 — 2024 (Menunggu Sidang TA2)",
+      eduPeriod: "2019 — 2024",
       certTitle: "Sertifikasi & Beasiswa",
       certBnsp: "Sertifikasi Kompetensi Web Developer BNSP",
       certBnspDesc: "Badan Nasional Sertifikasi Profesi (BNSP Indonesia)",
@@ -327,9 +415,25 @@ export const translations = {
       description:
         "Tersedia untuk posisi Full-Stack Engineer, pengembangan sistem korporat, dan konsultasi teknis.",
       btnEmail: "Kirim Email",
+      quickMsgTitle: "Kirim Pesan Cepat",
+      quickMsgName: "Nama / Perusahaan Anda",
+      quickMsgSubject: "Topik Proyek atau Posisi",
+      quickMsgBody: "Ceritakan singkat mengenai kebutuhan proyek atau kolaborasi...",
+      quickMsgSend: "Buka di Aplikasi Email",
       githubUrl: "https://github.com/Ardhiffamada1",
       linkedinUrl: "https://linkedin.com/in/ardhiffamada",
       websiteUrl: "https://ardhiffaperdana.my.id",
+    },
+    commandPalette: {
+      placeholder: "Ketik perintah atau cari bagian halaman...",
+      noResults: "Perintah tidak ditemukan.",
+      secNavigation: "Navigasi Halaman",
+      secActions: "Aksi Cepat",
+      secLinks: "Profil Eksternal",
+      toggleTheme: "Ganti Tema Gelap / Terang",
+      switchLang: "Ganti Bahasa (ID / EN)",
+      copyEmail: "Salin Alamat Email",
+      copiedEmail: "Email Berhasil Disalin!",
     },
   },
 };

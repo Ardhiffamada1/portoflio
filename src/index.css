@@ -11,33 +11,44 @@
   --color-subtle: var(--text-subtle);
   --color-muted: var(--text-muted);
   --color-accent: var(--accent-color);
+  --color-accent-light: var(--accent-light);
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* 2. Variable Warna Mode Dark (Default) */
+/* 2. Variable Warna Monochrome Pitch-Black + Glass (Default Dark) */
 :root {
-  --bg-main: #0a0a0a;
-  --bg-surface: #121212;
-  --bg-surface-hover: #1a1a1a;
-  --border-main: #262626;
-  --border-hover: #3a3a3a;
-  --text-main: #fafafa;
-  --text-subtle: #a3a3a3;
-  --text-muted: #525252;
-  --accent-color: #6e7e70;
+  --bg-main: #000000;
+  --bg-surface: rgba(18, 18, 18, 0.58);
+  --bg-surface-hover: rgba(32, 32, 32, 0.72);
+  --border-main: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.32);
+  --text-main: #ffffff;
+  --text-subtle: #b3b3b3;
+  --text-muted: #737373;
+  --accent-color: #ffffff;
+  --accent-light: #e5e5e5;
+  --spotlight-rgba: rgba(255, 255, 255, 0.09);
+  --glass-highlight: rgba(255, 255, 255, 0.06);
 }
 
-/* 3. Variable Warna Mode Light */
+/* 3. Variable Warna Monochrome Light + Glass */
 html.light {
-  --bg-main: #fbfbfb;
-  --bg-surface: #f0f0f0;
-  --bg-surface-hover: #e8e8e8;
-  --border-main: #e5e5e5;
-  --border-hover: #d4d4d4;
-  --text-main: #0a0a0a;
-  --text-subtle: #525252;
-  --text-muted: #8e8e8e;
-  --accent-color: #4a5b4c;
+  --bg-main: #f7f7f7;
+  --bg-surface: rgba(255, 255, 255, 0.68);
+  --bg-surface-hover: rgba(242, 242, 242, 0.85);
+  --border-main: rgba(0, 0, 0, 0.12);
+  --border-hover: rgba(0, 0, 0, 0.35);
+  --text-main: #000000;
+  --text-subtle: #404040;
+  --text-muted: #737373;
+  --accent-color: #000000;
+  --accent-light: #1f1f1f;
+  --spotlight-rgba: rgba(0, 0, 0, 0.07);
+  --glass-highlight: rgba(255, 255, 255, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* 4. Global Body Style & Smooth Transition */
@@ -46,8 +57,28 @@ body {
   color: var(--text-main);
   font-family: var(--font-sans);
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.35s ease,
+    color 0.35s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reusable Monochrome Glass Card */
+.glass-card {
+  background-color: var(--bg-surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-main);
+  box-shadow: inset 0 1px 0 0 var(--glass-highlight);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.glass-card:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-hover);
 }
 
 /* Custom Scrollbar */
@@ -60,4 +91,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--border-main);
   border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
 }
