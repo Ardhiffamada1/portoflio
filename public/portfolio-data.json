@@ -166,6 +166,23 @@
         "demo": "https://wms-zeta-mauve.vercel.app/"
       },
       {
+        "id": "Nusava",
+        "title": "Nusava eCommerce",
+        "category": "eCommerce",
+        "year": "2026",
+        "description": "NUSAVA (Satu Indonesia, Banyak Cerita) adalah platform e-commerce marketplace modern yang menghubungkan pecinta kuliner dan kriya dengan toko resmi produsen oleh-oleh khas daerah di seluruh Indonesia (Yogyakarta, Bali, Surabaya, Bandung, Aceh, Solo, Medan, Palembang, dll.).",
+        "techStack": ["Next.js", "React", "Node.js", "Tailwind CSS", "Vercel"],
+        "architecture": "Next.js App Router dengan Server-Side Rendering (SSR) & pemfilteran lokasi dinamis",
+        "highlights": [
+          "Katalog produk khas daerah dengan fitur pencarian instan, filter kategori, dan asal kota",
+          "Sistem rewards, voucher, flash sale, serta fitur hampers dan dropshipper",
+          "Checkout terintegrasi dengan pilihan ekspedisi, perhitungan ongkir otomatis, dan berbagai metode pembayaran"
+        ],
+        "metrics": "Deployed",
+        "github": null,
+        "demo": "https://nusava-jet.vercel.app/"
+      },
+      {
         "id": "cariclipper",
         "title": "CariClipper Service Platform",
         "category": "Platform Direktori Digital",
